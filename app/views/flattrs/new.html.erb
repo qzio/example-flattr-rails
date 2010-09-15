@@ -1,0 +1,18 @@
+<h1>Sample flattr api rails app</h1>
+<% if is_callback? %>
+  <h1>welcome back from authenticateing.</h1>
+
+  <fieldset>
+    <legend>My flattr profile </legend>
+    <%= debug @user_info %>
+  </fieldset>
+
+  <fieldset>
+    <legend>My things</legend>
+    <%=debug @user_things %>
+  </fieldset>
+
+  <%= link_to 'logout and try again', start_over_flattr_path%>
+<% else %>
+  <%=link_to 'authenticate at flattr.com', @authorize_url %>
+<% end %>
