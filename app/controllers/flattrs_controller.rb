@@ -50,7 +50,7 @@ class FlattrsController < ApplicationController
     flattr_params = {
         :key => FLATTR_CONFIG[:key],
         :secret => FLATTR_CONFIG[:secret],
-        :site => 'http://api.flattr.local',
+        :site => FLATTR_CONFIG[:site],
         :authorize_path => '/oauth/authenticate',
         :callback_url => new_flattr_url,
         :debug => true
