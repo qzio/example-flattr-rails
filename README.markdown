@@ -2,6 +2,8 @@
 
 example application using the flattr_rb gem to integrate with the flattr OAuth rest api.
 
+set api key/secret in config/initializers/flattr_rb.rb
+
 = Support
 
 Direct support: https://flattr.com/support/contact
