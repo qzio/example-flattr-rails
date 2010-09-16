@@ -60,6 +60,6 @@ class FlattrsController < ApplicationController
       flattr_params[:access_token] = session[:flattr][:access_token] if session[:flattr][:access_token]
       flattr_params[:oauth_verifier] = params[:oauth_verifier] if params[:oauth_verifier]
     end
-    @client ||= FlattrClient::Base.new(flattr_params)
+    @client ||= FlattrRest::Base.new(flattr_params)
   end
 end

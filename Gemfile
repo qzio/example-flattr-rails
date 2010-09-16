@@ -18,7 +18,7 @@ gem 'thin'
 # gem 'bj'
 gem 'nokogiri'
 gem 'oauth'
-gem 'flattr_rb'
+gem 'flattr_rest'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
