@@ -1,8 +1,12 @@
 # flattr_rb-example-rails-app
 
-example application using the flattr_rb gem to integrate with the flattr OAuth rest api.
+example application using the [ruby-flattr-rest](http://github.com/flattr/ruby-flattr-rest)
+gem to integrate with the flattr OAuth rest api.
+
 
 set api key/secret in config/initializers/flattr_rb.rb
+
+
 
 ## Support
 

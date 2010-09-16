@@ -36,7 +36,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.6)
-    flattr_rb (0.0.1)
+    flattr_rest (0.0.1)
       nokogiri
       oauth
     i18n (0.4.1)
@@ -92,7 +92,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  flattr_rb
+  flattr_rest
   nokogiri
   oauth
   rails (= 3.0.0)
