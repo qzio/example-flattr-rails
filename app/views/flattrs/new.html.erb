@@ -2,17 +2,27 @@
 <% if is_callback? %>
   <h1>welcome back from authenticateing.</h1>
 
-  <fieldset>
-    <legend>My flattr profile </legend>
+  <p>
     <%= debug @user_info %>
-  </fieldset>
+    <%= link_to 'your profile', me_flattr_path %>
+  </p>
 
-  <fieldset>
-    <legend>My things</legend>
-    <%=debug @user_things %>
-  </fieldset>
+  <p>
+    <%= link_to 'list of categories', categories_flattr_path %>
+  </p>
 
-  <%= link_to 'logout and try again', start_over_flattr_path%>
+  <p>
+    <%= link_to 'list of languages', languages_flattr_path %>
+  </p>
+
+  <p>
+    <%= link_to 'logout and try again', start_over_flattr_path %>
+  </p>
+
+  <p>
+    <%= link_to '', '/flattr/users/266'%>
+  </p>
+
 <% else %>
   <%=link_to 'authenticate at flattr.com', @authorize_url %>
 <% end %>

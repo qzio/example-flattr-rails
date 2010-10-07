@@ -1,0 +1,4 @@
+<% @countries.each do |country| %>
+  <%= render :partial => 'simple', :locals => {:model => country}%>
+  <hr/>
+<% end %>

@@ -1,0 +1,14 @@
+<h2>flattr info</h2>
+
+<%= image_tag(@user_info.gravatar) if @user_info.gravatar %>
+<div>
+  <%= debug @user_info %>
+  username: <%= h(@user_info.username) %>
+  <p><%= h(@user_info.description)%></p>
+</div>
+
+<div>
+  <% @things.each do |t| %>
+    <%= render :partial => 'thing', :locals => {:thing => t} %>
+  <% end %>
+</div>

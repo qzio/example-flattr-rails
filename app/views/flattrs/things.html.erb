@@ -1,0 +1,7 @@
+<h2>Things</h2>
+<% @things.each do |thing| %>
+  <div>
+    <%= render :partial => 'thing', :locals => {:thing => thing} %>
+  </div>
+  <hr/>
+<% end %>

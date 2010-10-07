@@ -1,0 +1,14 @@
+<h2>your flattr info</h2>
+
+<div>
+  <%= debug @user_info %>
+  username: <%= h(@user_info.username) %>
+  <p><%= h(@user_info.description)%></p>
+</div>
+
+<div>
+  <% @things.each do |t| %>
+    <%= render :partial => 'thing', :locals => {:thing => t} %>
+  <% end %>
+</div>
+

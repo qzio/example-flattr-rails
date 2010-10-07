@@ -1,0 +1,4 @@
+<% @models.each do |model| %>
+  <%= render :partial => 'simple', :locals => {:model => model} %>
+  <hr/>
+<% end %>

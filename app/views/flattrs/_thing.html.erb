@@ -1,0 +1,11 @@
+<h2><%= link_to thing.title, thing.url%></h2>
+<div>
+  <%=h(thing.story) %>
+  <a href="#" onclick="document.getElementById('more-<%=thing.thing_id%>').style.display = 'block';">more</a>
+  <div id="more-<%=thing.thing_id%>" style="display:none;">
+    <%= debug thing %>
+  </div>
+</div>
+<div>
+  created at <%= Time.at(thing.created_at.to_i) %> | <%= thing.language %>
+</div>
