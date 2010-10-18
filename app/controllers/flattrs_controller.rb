@@ -67,6 +67,21 @@ class FlattrsController < ApplicationController
     render(:text => "unable to find the thing") if @things.empty?
   end
 
+  def new_thing
+    @languages = {}
+    @client.languages.each do |lang|
+      @languages[lang.language_id] = lang.name
+    end
+    @categories = {}
+    @client.categories.each do |category|
+      @categories[category.category_id] = category.name
+    end
+  end
+  def create_thing
+    @client.submit_thing params[:thing]
+    redirect_to :action => 'me'
+  end
+
   def languages
     @models = @client.languages
     render 'simple'

@@ -1,0 +1,26 @@
+<form action="/flattr/create_thing" method="post">
+  <%= form_tag :html => {:action => '/flattr/create_thing', :method => 'post'} %>
+  <fieldset>
+    <div>
+      <input placeholder="URL" name="thing[url]" type="text"/>
+    </div>
+    <div>
+      <input placeholder="TITLE" name="thing[title]" type="text" />
+    </div>
+    <div>
+      <textarea name="thing[description]">Description</textarea>
+    </div>
+    <div>
+      <input placeholder="comma separated list of tags" name="thing[tags]" type="text"/>
+    </div>
+    <div>
+      <%= select 'thing','category', @categories.invert, {:selected => "rest"} %>
+    </div>
+    <div>
+      <%= select 'thing','language', @languages.invert, {:selected => "en_GB"} %>
+    </div>
+    <div>
+      <%= submit_tag %>
+    </div>
+  </fieldset>
+</form>
