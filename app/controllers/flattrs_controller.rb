@@ -59,12 +59,14 @@ class FlattrsController < ApplicationController
     elsif params[:user_id]
       logger.info"will try on user_id"
       @things = @client.things(:user_id => params[:user_id])
+    elsif params[:q]
+      logger.info"will with query: #{params[:q]}"
+      @things = @client.things(:q => params[:q])
     else
       @things = @client.user_things
     end
-    logger.info "things: #{@things.inspect}"
 
-    render(:text => "unable to find the thing") if @things.empty?
+    render(:text => "unable to find the thing(s)") if @things.blank?
   end
 
   def new_thing
@@ -77,6 +79,7 @@ class FlattrsController < ApplicationController
       @categories[category.category_id] = category.name
     end
   end
+
   def create_thing
     @client.submit_thing params[:thing]
     redirect_to :action => 'me'

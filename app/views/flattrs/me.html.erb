@@ -14,3 +14,11 @@
 
 
 <%= link_to 'submit thing', '/flattr/new_thing' %>
+
+<form method="GET" action="/flattr/things" >
+  <fieldset>
+    <legend>Search for things</legend>
+    <input type="text" name="q" value="" placeholder="search query"/>
+    <input type="submit" value="Search!"/>
+  </fieldset>
+</form>
